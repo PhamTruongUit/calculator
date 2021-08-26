@@ -23,7 +23,7 @@ function result()
         catch (error)
             {
                 results.innerText = ''
-                alert('Vui long nhập lại')
+                alert('Vui lòng nhập lại')
             }
     })
 }
