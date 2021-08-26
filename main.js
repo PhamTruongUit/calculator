@@ -16,7 +16,8 @@ function result()
         var a = ''
         a = results.innerText.replace(/\×/g,'*')
         a = a.replace(/\÷/g,'/')
-        results.innerText = eval(a).toFixed(2)
+        var re = eval(a)
+        re % 1 != 0 ? results.innerText = re.toFixed(2) : results.innerText = re
     })
 }
 function init()
