@@ -16,8 +16,15 @@ function result()
         var a = ''
         a = results.innerText.replace(/\×/g,'*')
         a = a.replace(/\÷/g,'/')
-        var re = eval(a)
-        re % 1 != 0 ? results.innerText = re.toFixed(2) : results.innerText = re
+        try {
+                var re = eval(a)
+                re % 1 != 0 ? results.innerText = re.toFixed(2) : results.innerText = re
+            }
+        catch (error)
+            {
+                results.innerText = ''
+                alert('Vui long nhập lại')
+            }
     })
 }
 function init()
